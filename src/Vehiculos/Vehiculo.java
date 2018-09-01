@@ -102,6 +102,6 @@ public abstract class Vehiculo implements Serializable{
     
     @Override
     public String toString(){
-        return "Tipo: "+tipoVehiculo+ " Marca: "+getMarca()+" Modelo: "+" Año: "+getAño()+" Color: "+getColor()+" Precio: "+getPrecio();
+        return "Tipo: "+tipoVehiculo+ "| Marca: "+getMarca()+"| Modelo: "+getModelo()+"| Año: "+getAño()+"| Color: "+getColor()+"| Precio: "+getPrecio();
     }
 }

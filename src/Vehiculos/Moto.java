@@ -42,6 +42,6 @@ public class Moto extends Vehiculo{
     
     public String toString(){
   
-        return super.toString()+ " Tipo cadena: "+ tipoCadena+" Tipo manublio: "+tipoManublio;
+        return super.toString()+ "| Tipo cadena: "+ tipoCadena+"| Tipo manublio: "+tipoManublio;
     }
 }

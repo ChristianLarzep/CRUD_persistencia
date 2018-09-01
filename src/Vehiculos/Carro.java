@@ -29,7 +29,7 @@ public class Carro extends Vehiculo{
         if(converible){
             convert = "Si";
         }
-        return super.toString()+ " Convertible: "+ convert;
+        return super.toString()+ "| Convertible: "+ convert;
     }
     
 }

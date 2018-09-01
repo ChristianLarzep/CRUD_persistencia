@@ -44,7 +44,6 @@ public class CRUD_persistencia {
     public static void menu(Acciones acciones) throws  FileNotFoundException, IOException, ClassNotFoundException{
         int opcion;
         do{
-            System.out.print("Opciones: ");
             opcion = acciones.optionesMenu();
             switch(opcion){
                 case 0:

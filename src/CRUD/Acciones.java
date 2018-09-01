@@ -42,6 +42,7 @@ public class Acciones implements Serializable, CRUD{
         System.out.println("6.- Registrar entrega vehiculo");
         System.out.println("7.- Registrar vehiculo");
         System.out.println("0.- Salir");
+        System.out.print("Opcion: ");
         num = scanner.nextInt();
         return num;
     }
@@ -137,7 +138,7 @@ public class Acciones implements Serializable, CRUD{
                 String cadena = scanner.next();
                 listaMotos.get(contMotos).setTipoCadena(cadena);
                 System.out.print(" Tipo de manublio: ");
-                String manublio = scanner.next();
+                String manublio = scanner.nextLine();
                 listaMotos.get(contMotos).setTipoManublio(manublio);
                 contMotos++;
             break;
@@ -155,7 +156,7 @@ public class Acciones implements Serializable, CRUD{
         for (int i = 0; i < listaTickets.size(); i++) {
             if(idEnt == listaTickets.get(i).getIdTicket()){
               
-                listaTickets.get(i).setBorrado(true);
+                //listaTickets.get(i).setBorrado(true);
                 if(listaTickets.get(i).getVehiculo().getTipoVehiculo().equals("car")){
                     listaCarros.get(listaTickets.get(i).getVehiculo().getId()).setDisponible(true);
                   
@@ -187,11 +188,11 @@ public class Acciones implements Serializable, CRUD{
         String hora = Integer.toString(fecha.get(Calendar.HOUR_OF_DAY));
         String minuto = Integer.toString(fecha.get(Calendar.MINUTE));
         String segundo = Integer.toString(fecha.get(Calendar.SECOND));
-        System.out.print(" Nombre cliente: ");
-        String nombre = scanner.next();
+        System.out.print(" Nombre'(s) del cliente: ");
+        String nombre = scanner.nextLine();
         cliente.setNombre(nombre);
-        System.out.print(" Apellido cliente: ");
-        String apellido = scanner.next();
+        System.out.print(" Apellidos del cliente: ");
+        String apellido = scanner.nextLine();
         cliente.setApellido(apellido);
         System.out.print(" Edad: ");
         int edad = scanner.nextInt();
@@ -317,9 +318,11 @@ public class Acciones implements Serializable, CRUD{
 
     @Override
     public void mostrar() {
+        System.out.println("------------------------------------------------------");
         for (Ticket ticket : listaTickets) {
                     if(ticket.isBorrado() == false){
                         System.out.println(ticket.toString());
+                        System.out.println("------------------------------------------------------");
                     }
                     
         }

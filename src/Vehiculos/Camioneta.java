@@ -34,6 +34,6 @@ public class Camioneta extends Vehiculo{
     }
     public String toString(){
 
-        return super.toString()+ " Tipo cabina: "+ tipoCabina+" Tipo caja: "+tipoCaja;
+        return super.toString()+ "| Tipo cabina: "+ tipoCabina+"| Tipo caja: "+tipoCaja;
     }
 }
