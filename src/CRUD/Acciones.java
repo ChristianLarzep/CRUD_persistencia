@@ -159,19 +159,11 @@ public class Acciones implements Serializable, CRUD{
                 //listaTickets.get(i).setBorrado(true);
                 if(listaTickets.get(i).getVehiculo().getTipoVehiculo().equals("car")){
                     listaCarros.get(listaTickets.get(i).getVehiculo().getId()).setDisponible(true);
-                  
-                   
-                   
                 }else if(listaTickets.get(i).getVehiculo().getTipoVehiculo().equals("cam")){
-                    listaCamionetas.get(listaTickets.get(i).getVehiculo().getId()).setDisponible(true);
-                    
-                   
+                    listaCamionetas.get(listaTickets.get(i).getVehiculo().getId()).setDisponible(true);  
                 }else{
                    listaMotos.get(listaTickets.get(i).getVehiculo().getId()).setDisponible(true);
-                   
-                  
                 }
-
                 break;
             }
         }
